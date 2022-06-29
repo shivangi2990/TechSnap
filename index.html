@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AI & Data Science</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid" style="max-width: 100%;">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="margin-left: 90px;">Dphi</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Courses</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Challenges<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Active/Upcoming</a></li>
+          <li><a href="#">Practice</a></li>
+      </li>
+      </ul>
+        <li class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Bootcamps <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">View all Bootcamps</a></li>
+          <li><a href="#">Data Engineering</a></li>
+          <li><a href="#">Data Science by IIT-B Analytics and Dphi</a></li>
+          <li><a href="#">Deep Learning by IIT-B Analytics and Dphi</a></li>
+        </ul>
+        
+      </li>
+      </li>
+        <li class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Notebooks</a></li>
+          <li><a href="#">Live Sessions</a></li>
+          <li><a href="#">Discuss</a></li>
+        </ul>
+        
+      </li>
+      </li>
+      <li><a href="#">Donate</a></li>
+      <li><a href="#">Wall of Love❤️</a></li>
+      <div class="bttn" style="display: flex;"><li><button class="btn1"> Login</button></li>
+     <li><button class="btn2">Join for free<button></li></div>
+  </div>
+</nav>
+  
+<div class="container" style="max-width: 100%; background-image: url(image/img.png); max-height: fit-content;">
+  <h2>What are AI Challenges?</h2>
+<!-- <div class="img"><img src="image/img.png" width="300px" height="300px"></div> -->
+<div class="text"><p>AI Challenges at DPhi simulate real-world problems. It is a great place to put your <br>
+AI/Data Science skills to test on diverse datasets allowing you to foster learning<br>
+through competitions. </p></div>
+<br><br>
+<div class="button" style="max-width: 100% ;display: flex;"><button class="btn3">Get Started</button><button class="btn4">Organize AI Challenge</button></div></div>
+<div class="container-2" style="max-width: 100%;">
+            <div class="child"><h1 class="one"><b>100K+</b></h1><br><h5>AI Model Submissions</h5></div>
+            <div class="child"><h1 class="one"><b>50K+</b></h1><br><h5>Data Scientist</h5></div>
+            <div class="child"><h1 class="one"><b>100+</b></h1><br><h5>AI Challenges hosted</h5></div>
+</div>
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a class="first" style="display: flex;" href="#"><b>Active</b></a></li>
+            <li><a class="first" style="display: flex;" href="#"><b>Upcoming</b></a></li>
+            <li><a class="first" style="display: flex;" href="#"><b>Past</b></a></li>
+            </ul>
+        </div>
+</div>
+<div class="card" style=" width:30%; margin-left: 90px; max-width: 100%;">
+    <img src="image/img-2.png" alt="Avatar" style="width:100%;">
+    <div class="container--" style="max-width: 100%;">
+      <h4 id="content"><b>Data Sprint 80-Sports Genre<br>Identification</b></h4><br>
+      <div class="clock">
+        <h5 id="headline">ENDS IN</h5>
+        <div id="countdown">
+          <ul>
+            <li class="clock"><span id="days"></span>Days:<br><p id="day"></p></li>
+            <li class="clock"><span id="hours"></span>Hours:<br><p id="hour"></p></li>
+            <li class="clock"><span id="minutes"></span>Minutes:<br><p id="minute"></p></li>
+            <li class="clock"><span id="seconds"></span>Seconds<br><p id="second"></p></li>
+          </ul>
+        </div>
+      </div>
+      <script>(function () {
+        const second = 1000,
+              minute = second * 60,
+              hour = minute * 60,
+              day = hour * 24;
+      
+        //I'm adding this section so I don't have to keep updating this pen every year :-)
+        //remove this if you don't need it
+        let today = new Date(),
+            dd = String(today.getDate()).padStart(2, "0"),
+            mm = String(today.getMonth() + 1).padStart(2, "0"),
+            yyyy = today.getFullYear(),
+            nextYear = yyyy,
+            dayMonth = "07/3/",
+            birthday = dayMonth + yyyy;
+        
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > birthday) {
+          birthday = dayMonth + nextYear;
+        }
+        //end
+        
+        const countDown = new Date(birthday).getTime(),
+            x = setInterval(function() {    
+      
+              const now = new Date().getTime(),
+                    distance = countDown - now;
+      
+              document.getElementById("day").innerText = Math.floor(distance / (day)),
+                document.getElementById("hour").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minute").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("second").innerText = Math.floor((distance % (minute)) / second);
+      
+              //do something later when date is reached
+              if (distance < 0) {
+                document.getElementById("headline").innerText = "Finish!";
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                clearInterval(x);
+              }
+              //seconds
+            }, 0)
+        }());
+        </script>
+    </div>
+   <button class="btn2" style="margin-left: 50px; margin-bottom: 20px; align-self: center;">Participate Now</button>
+  </div>
+  <!-- before footer -->
+ <div class="before-footer" style=" margin-top:90px; background-color:rgb(212, 225, 225)">
+  <br><h3 id="header1" style="margin-left: 90px; margin-top: 45px;"><b>Why Participate in AI Challenges</b></h3>
+  <div class="cards">
+  <div class="card mb-3" style="max-width: 540px; display: inline-block; margin-left: 90px; margin-top: 50px; background-color: rgb(249, 248, 246);" >
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="..." class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><b>Prove your skills</b></h3>
+          <p class="card-text">Gain substantial experience by solving real-world problems and pit against others to come up with innovative solutions.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px; display: inline-block;margin-left: 50px; margin-top: 50px; background-color: rgb(249, 248, 246);">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="..." class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><b>Earn recognition</b></h3>
+          <p class="card-text">You will stand out from the crowd if you do well in AI challenges, it not only helps you shine in the community but also earns rewards.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card mb-3" style="max-width: 540px; display: inline-block; margin-left: 90px;margin-bottom: 30px; margin: top 90px; background-color: rgb(249, 248, 246);">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="..." class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><b>Challenge yourself</b></h3>
+          <p class="card-text">There is nothing for you to lose by participating in a challenge. You can fail safe, learn out of the entire experience and bounce back harder.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px; display: inline-block;margin-left: 50px; margin-bottom: 30px; margin: top 60px; background-color: rgb(249, 248, 246);">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="..." class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title"><b>Learn from community</b></h3>
+          <p class="card-text">One can look and analyze the solutions submitted by the other Data Scientists in the community and learn from them.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </div>
+ <!-- before footer ends -->
+ <div class="upcoming-challenges" style="margin-top: 45px; margin-bottom:100px;">
+  <h3 style="margin-left: 90px; margin-top: 50px margin-bottom: 20px;">Upcoming Challenges</h3>
+  <hr id="line" style=" margin-left: 90px; height:2px; width: 80%; color: brown; background-color: brown">
+  <img src="image/img-2.jpg" alt="" style="margin-left: 50%; margin-top: 50px; align-self:center; width:70px; height:70px;">
+  <p style="margin-left: 50%; "><h3 style="margin-left:42%;">No Upcoming Challenges</h3><small class="text-muted" style="margin-left: 43%;">Please check active and past challenges</small></p></p>
+ </div>
+ <div class="past-challenges" style="margin-top: 45px;">
+  <h3 style="margin-left: 90px; margin-top: 50px margin-bottom: 20px;">Past Challenges</h3>
+  <hr id="line" style=" margin-left: 90px; height:2px; width: 80%; color: brown; background-color: brown">
+  <div class="cards4">
+    <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: green;
+}
+
+.btn.active {
+  background-color: white;
+  color: green;
+}
+</style>
+</head>
+<body>
+
+
+<!-- <div id="btnContainer">
+  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+</div> -->
+<br>
+
+<div class="row" style="padding:10px;">
+  <div class="column" style="background-color:white; height: 20%;">
+   <div class="card" style=" width:40%; margin-left: 90px;">
+        <img src="image/img-2.png" alt="Avatar" style="width:100%;">
+        <div class="container--">
+          <h4 id="content"><b>Data Sprint 80-Sports Genre<br>Identification</b></h4><br>
+          <div class="clock">
+            <h5 id="headline">ENDED ON</h5>
+            <div id="countdown">
+              <p class="card-text"><small class="text-muted">22ND June 8:00pm</small></p>
+          </div>
+        </div>
+        
+      </div>
+     <button class="btn2" style="margin-left: 50px; margin-bottom: 20px; align-self: center;">Participate Now</button>
+    </div>
+  </div>
+  <div class="column" style="background-color:white; height: 20%;">
+    <div class="card" style=" width:40%;">
+      <img src="image/img-2.png" alt="Avatar" style="width:100%;">
+      <div class="container--">
+        <h4 id="content"><b>Data Sprint 80-Sports Genre<br>Identification</b></h4><br>
+        <div class="clock">
+          <h5 id="headline">ENDED ON</h5>
+          <div id="countdown">
+            <p class="card-text"><small class="text-muted">22ND June 8:00pm</small></p>
+        </div>
+      </div>
+      
+    </div>
+   <button class="btn2" style="margin-left: 50px; margin-bottom: 20px; align-self: center;">Participate Now</button>
+  </div>
+  </div>
+  <div class="row" style="padding:30px;">
+    <div class="column" style="background-color:white; height: 20%;">
+     <div class="card" style=" width:40%; margin-left: 90px;">
+          <img src="image/img-2.png" alt="Avatar" style="width:100%;">
+          <div class="container--">
+            <h4 id="content"><b>Data Sprint 80-Sports Genre<br>Identification</b></h4><br>
+            <div class="clock">
+              <h5 id="headline">ENDED ON</h5>
+              <div id="countdown">
+                <p class="card-text"><small class="text-muted">22ND June 8:00pm</small></p>
+            </div>
+          </div>
+          
+        </div>
+       <button class="btn2" style="margin-left: 50px; margin-bottom: 20px; align-self: center;">Participate Now</button>
+      </div>
+    </div>
+    <div class="column" style="background-color:white; height: 20%;">
+      <div class="card" style=" width:40%;">
+        <img src="image/img-2.png" alt="Avatar" style="width:100%;">
+        <div class="container--">
+          <h4 id="content"><b>Data Sprint 80-Sports Genre<br>Identification</b></h4><br>
+          <div class="clock">
+            <h5 id="headline">ENDED ON</h5>
+            <div id="countdown">
+              <p class="card-text"><small class="text-muted">22ND June 8:00pm</small></p>
+          </div>
+        </div>
+      </div>
+     <button class="btn2" style="margin-left: 50px; margin-bottom: 20px; align-self: center;">Participate Now</button>
+    </div>
+    </div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+
+  </div>
+  </div>
+<!-- footer start -->
+<div class="footer-content" style="margin-left: 90px; display:inline-block;">
+ <div class="foot-head" style="display: inline-block;  padding: 30px;">
+  <h3>Learn</h3><br>
+  <p>Data Science & AI Courses<br>
+    Practice Data Science & AI Challenges<br>
+    Discussion forum<br>
+    Data Science & AI Live Sessions<br>
+    Community Notebooks (Code Share)</p>
+ </div>
+ <div class="foot-head" style="display: inline-block;  padding: 30px;">
+  <h3>Getting Started</h3>
+  <p>Data Science<br>
+    Machine Learning<br>
+    Deep Learning<br>
+    Data Visualization 101<br>
+    Natural Language Processing 101<br>
+    Time Series 101</p>
+ </div>
+ <div class="foot-head" style="display: inline-block;  padding: 30px;">
+  <h3>More</h3><br>
+  <p>Host AI & Machine Learning Challenges<br>
+    Blog<br>
+    Learner Stories</p>
+ </div>
+ <div class="foot-head" style="display: inline-block; padding: 30px;" >
+  <h3>Organization</h3><br><br><br>
+  <p>About Us<br>
+    Contact Us</p>
+ </div>
+</div>
+</body>
+
+</html>
